@@ -1,18 +1,57 @@
-nav{
-    
-    
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Josefin+Sans&family=Livvic&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
+
+
+/*HERO*/
 .hero{
-    background-color: rgb(124, 115, 167);
+    background: url(../images/fotohero.jpeg.jpeg)  ;
+    filter: sepia(45%) brightness(85%) contrast(100%);
     background-size: cover;
     height: 50vh;
-    min-height: 600px;
-    color: azure;
+    min-height: 700px;
+    color: rgb(0, 0, 0);
+    font-family: 'arial';
+    font-size: 2rem;
+    padding-top: 18rem;
+    
+    
+}
+.hero h1{
+   /*  color:black;
+   */ 
+    letter-spacing: 0.3rem;
+     
+    
+    font-size: 7rem;
+    font-family: 'Pathway Gothic One';
+}
+
+.botonhero{
+    padding: 0.38rem 1.6rem;
+    margin-top: 3rem;
+    background-color:transparent ;
+    border: 0.12rem solid #ffffff;
+    border-radius: 5%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 0.5rem;
     
 }
 
+/*termina HERO*/
 
+.sobremi{
+    color: azure;
+    background-color: #050400;
+    filter: sepia(15%) brightness(105%) grayscale(20%);
+    height: 50vh;
+    min-height: 700px;
+}
+
+
+
+contacto{
+    background-color: #837C69;
+}
 
 footer{
     background-color: #aaa;
