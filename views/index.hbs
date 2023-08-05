@@ -47,6 +47,31 @@
             <img src="images/camposhero.jpeg.jpeg" alt="...">
           </div>
         </div>
+        <div id="novedades" class="col-md-5 offset-md-2 py-3">
+          <h2>Novedades</h2>
+          <ul class="lista-novedades">
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 1</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 2</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 3</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 4</a></li>
+          </ul>
+        </div>
+        {{!-- inicio del modal --}}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Novedad 1</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h3>subtitulo</h3>
+                <p>cuerpo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{!-- fin de modal --}}
       </div>
     </section>
 
