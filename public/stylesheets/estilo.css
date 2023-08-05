@@ -39,6 +39,8 @@
 
 /*termina HERO*/
 
+
+/*SOBREMI*/
 .sobremi{
     color: azure;
     background-color: #050400;
@@ -46,7 +48,28 @@
     height: 50vh;
     min-height: 700px;
 }
+/*termina sobremi*/
 
+/*MISPINTURAS*/
+
+.mispinturas img{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    
+    
+}
+
+ 
+
+.mispinturas img:hover{
+    scale: 125%;
+    transition: 0.5s;
+} 
+
+
+/*termina mispinturas*/
 
 
 contacto{
