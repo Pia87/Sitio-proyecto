@@ -3,7 +3,7 @@
     <div id="Inicio" class="row align-items-center hero">
       <div class="col-lg-6 offset-lg-5">
         <p>Artista Plástica</p>
-        <h1>Pia Martínez</h1>
+        <h1>PIA MARTINEZ</h1>
         <button class="botonhero">Galería</button>
 
       </div>
@@ -23,7 +23,7 @@
       </div>
     </section>
     <section class="mispinturas" id="iramispinturas">
-      <div id="mispinturas" class="row align-items-center py-4" style="background-color:#837C69 ;">
+      <div id="mispinturas" class="row align-items-center py-4" style="background-color:#edededb3 ;">
         <h2>Mis Pinturas</h2>
         <h3>Galería de imágenes</h3>
          <div class="row align-items-center">
@@ -47,34 +47,39 @@
             <img src="images/camposhero.jpeg.jpeg" alt="...">
           </div>
         </div>
-        <div id="novedades" class="col-md-5 offset-md-2 py-3">
+        
+
+      </div>
+    </section>
+
+            <div id="iranovedades" class="col-md-5 offset-md-2 py-3">
           <h2>Novedades</h2>
           <ul class="lista-novedades">
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 1</a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 2</a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 3</a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Novedad 4</a></li>
-          </ul>
+            {{#each novedades}}
+            <li><a href="" data-bs-toggle="modal" data-bs-target="#modal{{id}}">{{titulo}} </a></li>
+               {{/each}}
+               </ul>
+
         </div>
+
         {{!-- inicio del modal --}}
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {{#each novedades}}
+        <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">Novedad 1</h2>
+                <h2 class="modal-title" id="exampleModalLabel{{id}} ">{{titulo}} </h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <h3>subtitulo</h3>
-                <p>cuerpo</p>
+                <h3>{{subtitulo}} </h3>
+                <p>{{cuerpo}} </p>
               </div>
             </div>
           </div>
         </div>
         {{!-- fin de modal --}}
-      </div>
-    </section>
-
+      {{/each}}
     <section class="contacto" id="iracontacto"></section>
     <div id="contacto" class="row align-items-center py-4" style="background-color:#000000;"></div>
     <h2>Contacto</h2>
