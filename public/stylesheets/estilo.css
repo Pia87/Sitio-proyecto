@@ -1,19 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Josefin+Sans&family=Livvic&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Josefin+Sans&family=Livvic&family=Marck+Script&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Caveat&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Fredericka+the+Great&family=Josefin+Sans&family=Klee+One&family=Livvic&family=Marck+Script&family=Merienda&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Philosopher&family=Quicksand&family=Raleway&family=Sen&family=Voltaire&family=Waiting+for+the+Sunrise&family=Ysabeau+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Caveat&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Josefin+Sans&family=Livvic&family=Marck+Script&family=Merienda&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Quicksand&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Caveat&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Fredericka+the+Great&family=Josefin+Sans&family=Livvic&family=Marck+Script&family=Merienda&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Quicksand&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Atkinson+Hyperlegible&family=Biryani&family=Cormorant+SC&family=Covered+By+Your+Grace&family=Josefin+Sans&family=Livvic&family=Marck+Script&family=Montagu+Slab&family=Mukta&family=Mulish&family=Nunito+Sans&family=Pacifico&family=Pathway+Gothic+One&family=Quicksand&family=Raleway&family=Sen&family=Voltaire&family=Ysabeau+SC&display=swap');
 
 
 
 .navbar{
-    background-color: #d6dfdfe6;
-    
+    background-color: #d6d9dfe6;
+    background:-webkit-linear-gradient(90deg, #deddddec 0%, #525251b5 80%);
+    font-family: 'mulish';
 }
 .dropdown-menu{
-    background-color: #d6dfdfe6;
+    background-color: #d6d9dfe6;
+}
+.nav-link:hover{
+    color: white;
+    
+}
+.page:hover{
+    color: white;
 }
 
-
+.iconos{
+    
+    margin: 0 auto;
+    
+}
+i{
+    color: #050400;
+    padding:5px 8px ;
+    border-radius: 5px;
+    margin-right: 15px;
+    
+   
+}
+i:hover{
+    background-color: #d6d9dfe6;
+    color: #525251b5;
+}
+.bi{
+    
+}
 
 /*HERO*/
 .hero{
@@ -23,10 +50,10 @@
     height: 50vh;
     min-height: 620px;
     color: rgb(45, 45, 45);
-    font-family: 'Quicksand';
+    font-family: 'Mulish';
     font-size: 2.5rem;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 30px;
+    
     text-align: center;
     
     
@@ -35,12 +62,23 @@
   color:rgb(255, 255, 255);
    
     letter-spacing: 1rem;
-    text-shadow:2px 1px 4px #323131c2;
-    font-size: 3.9rem;
+    text-shadow:2px 1px 4px #000000c6;
+    font-size: 3.6rem;
     font-family: 'Alegreya Sans';
     /* font-weight: bold; */
+    -webkit-animation:appear 2s ease 0s 1 normal;
+    -moz-animation:change-color 4s ease 0s infinite normal;
+    -ms-animation:change-color 4s ease 0s infinite normal;
+    animation:change-color 4s ease 0s infinite normal;
 }
 
+.hero h3{
+    font-weight: bold;
+    font-family: 'Waiting for the Sunrise';
+    letter-spacing: 5px;
+    
+    
+}
 .botonhero{
     color: #d6dfdfe6 !important;
     font-size: 20px;
@@ -70,8 +108,11 @@
 
 }
 .descripcionhero{
+    margin-top: 130px;
     font-size: 1.5rem;
-    color: white;
+    color: black;
+    font-family: 'Waiting for the Sunrise';
+    font-weight: bolder;
 }
 
 /*termina HERO*/
@@ -82,17 +123,36 @@
     color: azure;
     background-color: #A3AEAC;
     filter: sepia(15%) brightness(105%) grayscale(20%);
+    
     height: 40vh;
     min-height: 550px;
     
 }
 .sobremi img{
-    height: 550px;
+   height: 550px;
+   
+    
 
+}
+.sobremi h2{
+    font-family: 'Waiting for the Sunrise';
+}
+.sobremi p{
+    font-family: 'mulish';
 }
 /*termina sobremi*/
 
 /*MISPINTURAS*/
+.mispinturas{
+    display: flex;
+    width: 100%;
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+}   
+
 
 .mispinturas img{
     width: 80%;
@@ -103,13 +163,33 @@
     
 }
 
- 
+.card{
+    width: 400px;
+    
+    border: none;
+    
+    background-color:#F2F2F2 ;
+    text-align: center;
+    font-family: 'mulish';
+}
+.card img{
+    height: 450px;
+}
 
 .mispinturas img:hover{
     scale: 125%;
     transition: 0.5s;
 } 
-
+.mispinturas h2{
+    font-family: 'Waiting for the Sunrise';
+    margin-top: 50px;
+    text-align: center;
+}
+.mispinturas h3{
+    font-family: 'mulish';
+    margin-top: 50px;
+    text-align: center;
+}
 /*NOVEDADES*/
 .lista-novedades{
     margin: 0;
@@ -117,8 +197,14 @@
     list-style: none;
 
 }
+.novedades{
+    font-family: 'mulish';
+    
+}
 .lista-novedades li{
     margin: 4px 0;
+    font-family: 'mulish';
+    
 }
 .lista-novedades li a{
     
@@ -127,11 +213,12 @@
     color: #050400;
     transition: all .2s ease-in-out;
     display: block;
+    font-family: 'mulish';
     
 }
 .lista-novedades li a:hover{
-    color: #aaa;
-    background-color: #6a6863;
+    color: white;
+    background-color: #B7BBB4;
 }
 
 .lista-novedades li a img{
@@ -142,16 +229,20 @@
 
 
 .contacto{
-    background-color: #d6dfdfe6;
+    background-color: #B7BBB4;
 }
 form{
-    background-color: #d6dfdfe6;
-}
-.enviar{
-    background-color: #A3AEAC;
-    border: #A3AEAC;
+    background-color: #B7BBB4;
 }
 
+.enviar{
+    
+    background-color: rgb(132, 136, 136);
+    border: #A3AEAC;
+}
+.iconoscontacto{
+    text-align: center;
+}
 footer{
-    background-color: #d6dfdfe6;
+    background-color: #B7BBB4;
 }

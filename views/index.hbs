@@ -2,16 +2,17 @@
   <div class="container-fluid">
     <div id="Inicio" class="row align-items-center hero">
       <div class="col-lg-6 offset-lg-3">
-        <h3>Artista Plástica</h3>
         <h1>PIA MARTINEZ</h1>
-        <p class="descripcionhero">Realización de pinturas abstractas. Te invito a conocer mis trabajos</p>
+        <h3>ARTISTA PLÁSTICA</h3>
+
+        <p class="descripcionhero">Te invito a conocer mis trabajos</p>
 
         <button class="botonhero"><a href="#iramispinturas">Galería</a> </button>
 
       </div>
     </div>
 
-    <section class="sobremi row align-items-center py-4" id="irasobremi">
+    <section class="sobremi row align-items-center {{!-- py-4 --}}" id="irasobremi">
 
       <div class="col-lg-3 col-md-3 offset-lg-2 d-none d-sm-block">
         <img src="images/pia.jpeg.jpeg" alt="sobremi" class="img-fluid">
@@ -28,88 +29,118 @@
       <div id="mispinturas" class="row align-items-center py-4" style="background-color:#edededb3 ;">
         <h2>Mis Pinturas</h2>
         <h3>Galería de imágenes</h3>
-        <div class="row align-items-center">
-          <div class="col-6 col-sm-4 ">
-            <img src="images/camposhero.jpeg.jpeg" alt="...">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
 
+          <div class="galeria col">
+            <div class="card">
+              <img src="../images/ccI.jpeg.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Campos Cromáticos I</h5>
+                <p class="card-text">Técnica Mixta sobre madera. Medidas: 100cm x 70cm</p>
+              </div>
+            </div>
           </div>
-          <div class="col-3 col-sm-4">
-            <img src="../images/ccI.jpeg.JPG" alt="...">
+          <div class="galeria col">
+            <div class="card">
+              <img src="../images/ccII.jpeg.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Campos Cromáticos II</h5>
+                <p class="card-text">Técnica Mixta sobre lienzo. Medidas: 90cm x 70cm</p>
+              </div>
+            </div>
           </div>
-          <div class="col-6 col-sm-4">
-            <img src="../images/ccII.jpeg.JPG" alt="...">
+          <div class=" galeria col">
+            <div class="card">
+              <img src="images/camposhero.jpeg.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Campos Cromáticos III</h5>
+                <p class="card-text">Técnica Mixta sobre lienzo. Medidas: 90cm x 70cm</p>
+              </div>
+            </div>
           </div>
-          <div class="col-6 col-sm-4">
-            <img src="images/camposhero.jpeg.jpeg" alt="...">
-          </div>
-          <div class="col-6 col-sm-4">
-            <img src="images/camposhero.jpeg.jpeg" alt="...">
-          </div>
-          <div class="col-6 col-sm-4">
-            <img src="images/camposhero.jpeg.jpeg" alt="...">
+          <div class="galeria col">
+            <div class="card">
+              <img src="../images/ccIV.jpeg.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Campos Cromáticos IV</h5>
+                <p class="card-text">Técnica Mixta sobre madera. Medidas: 100cm x 70cm</p>
+              </div>
+            </div>
           </div>
         </div>
 
 
+
+      </div>
+</section>
+      <div class="novedades row my-3">
+        <div id="iranovedades" class="col-md-5 offset-md-2 py-3">
+          <h3>Novedades</h3>
+          <ul class="lista-novedades">
+            {{#each novedades}}
+            <li>
+              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img src="{{imagen}}">
+                {{titulo}} </a>
+            </li>
+            {{/each}}
+          </ul>
+
+    
+
+          {{!-- inicio del modal --}}
+          {{#each novedades}}
+          <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLabel{{id}} ">{{titulo}} </h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="{{imagen}}">
+                  <h3>{{subtitulo}} </h3>
+                  <p>{{cuerpo}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{!-- fin de modal --}}
+          {{/each}}
+
+        </div>
+      </div>
+    
+    <section class="contacto" id="iracontacto">
+      <div id="contacto" class="row align-items-center py-4" style="background-color:#B7BBB4;">
+        <h2>Contacto</h2>
+
+
+        <form class="row g-3" action="/ " method="post">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" style="background-color: #F2F2F2 ;">
+          </div>
+          <div class="col-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email"
+              style="background-color: #F2F2F2">
+          </div>
+          <div class="col-12">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="3" name="mensaje"
+              style="background-color: #F2F2F2"></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary enviar">Enviar</button>
+          </div>
+
+        </form>
+        <p> {{message}} </p>
+        <div class="iconoscontacto">
+          <a href="https://www.instagram.com/pia.artistica/"><img src="" alt=""><i class="bi bi-instagram"></i></a>
+          <a href="https://www.behance.net/piamartnez2"><img src="" alt=""><i class="bi bi-behance"></i></a>
+        </div>
       </div>
     </section>
-    <div class="row my-3">
-      <div id="iranovedades" class="col-md-5 offset-md-2 py-3">
-        <h2>Novedades</h2>
-        <ul class="lista-novedades">
-          {{#each novedades}}
-          <li>
-            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img src="{{imagen}}">
-              {{titulo}} </a>
-          </li>
-          {{/each}}
-        </ul>
-
-      </div>
-    </div>
-      {{!-- inicio del modal --}}
-      {{#each novedades}}
-      <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLabel{{id}} ">{{titulo}} </h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img src="{{imagen}}">
-              <h3>{{subtitulo}} </h3>
-              <p>{{cuerpo}} </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{!-- fin de modal --}}
-      {{/each}}
-      <section class="contacto" id="iracontacto"></section>
-      <div id="contacto" class="row align-items-center py-4" style="background-color:#d6dfdfe6;">
-        <h2>Contacto</h2>
-      </div>
-
-      <form class="row g-3" action="/ " method="post">
-        <div class="col-md-6">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" name="nombre">
-        </div>
-        <div class="col-6">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
-        </div>
-        <div class="col-12">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary enviar">Enviar</button>
-        </div>
-
-      </form>
-      <p> {{message}} </p>
-
-    </div>
+  </div>
 </main>
