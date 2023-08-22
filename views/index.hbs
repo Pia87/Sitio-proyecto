@@ -29,9 +29,9 @@
       <div id="mispinturas" class="row align-items-center py-4" style="background-color:#edededb3 ;">
         <h2>Mis Pinturas</h2>
         <h3>Galería de imágenes</h3>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4" >
 
-          <div class="galeria col">
+          <div class="galeria col ">
             <div class="card">
               <img src="../images/ccI.jpeg.JPG" class="card-img-top" alt="...">
               <div class="card-body">
@@ -73,9 +73,10 @@
 
       </div>
 </section>
-      <div class="novedades row my-3">
-        <div id="iranovedades" class="col-md-5 offset-md-2 py-3">
-          <h3>Novedades</h3>
+      <div class="novedades row justify-content-center">
+        <h3 class="text-center">Novedades</h3>
+        <div id="iranovedades" class="col-md-4 py-3">
+          
           <ul class="lista-novedades">
             {{#each novedades}}
             <li>
@@ -111,11 +112,11 @@
       </div>
     
     <section class="contacto" id="iracontacto">
-      <div id="contacto" class="row align-items-center py-4" style="background-color:#B7BBB4;">
-        <h2>Contacto</h2>
+      <div id="contacto" class="row align-items-center py-4 row justify-content-center" style="background-color:#B7BBB4;">
+        <h2 class=" text-center">Contacto</h2>
 
 
-        <form class="row g-3" action="/ " method="post">
+        <form class="row g-3" style="width: 800px;" justify-content-center action="/ " method="post" style="" >
           <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" style="background-color: #F2F2F2 ;">
@@ -136,7 +137,7 @@
 
         </form>
         <p> {{message}} </p>
-        <div class="iconoscontacto">
+        <div class="iconoscontacto text-center">
           <a href="https://www.instagram.com/pia.artistica/"><img src="" alt=""><i class="bi bi-instagram"></i></a>
           <a href="https://www.behance.net/piamartnez2"><img src="" alt=""><i class="bi bi-behance"></i></a>
         </div>
